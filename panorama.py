@@ -52,13 +52,13 @@ class Panorama(QMainWindow) :
             
             key=cv.waitKey(1) 
             if key==ord('c'):            
-                self.imgs.append(frame)	# 영상 저장
+                self.imgs.append(frame)
             elif key==ord('q'):
                 self.cap.release() 
                 cv.destroyWindow('video display')                
                 break 
         
-        if len(self.imgs)>=2:		# 수집한 영상이 2장 이상이면
+        if len(self.imgs)>=2:		
             self.showButton.setEnabled(True) 
             self.stitchButton.setEnabled(True) 
             self.saveButton.setEnabled(True)        
